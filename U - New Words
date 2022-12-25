@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string s;
+   cin>>s;
+   int l,i,e=0,g=0,y=0,p=0,t=0;
+   l=s.size();
+   for(i=0 ; i<l ; i++)
+   {
+       s[i]=tolower(s[i]);
+       if(s[i]=='e') e++;
+       else if(s[i]=='g') g++;
+       else if(s[i]=='y') y++;
+       else if(s[i]=='p') p++;
+       else if(s[i]=='t') t++;
+   }
+   int Min,Min1,Min2,Min3;
+   Min1=min(e,g);
+   Min2=min(Min1,y);
+   Min3=min(Min2,p);
+   Min=min(Min3,t);
+   cout<<Min<<endl;
+    return 0;
+}
