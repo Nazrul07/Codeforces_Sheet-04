@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string Key = "PgEfTYaWGHjDAmxQqFLRpCJBownyUKZXkbvzIdshurMilNSVOtec#@_!=.+-*/";
+    string Original = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int q,l,i,p,j;
+    cin>>q;
+    string s;
+    cin>>s;
+    l=s.size();
+    if(q==1)
+    {
+        for(i=0 ; i<l ; i++)
+        {
+            for(j=0 ; j<62 ; j++)
+            {
+                if(s[i]==Original[j])
+                {
+                    p=j;
+                    break;
+                }
+            }cout<<Key[p];
+        }
+    }
+    else
+    {
+        for(i=0 ; i<l ; i++)
+        {
+            for(j=0 ; j<62 ; j++)
+            {
+                if(s[i]==Key[j])
+                {
+                    p=j;
+                    break;
+                }
+            }cout<<Original[p];
+        }
+    }
+    return 0;
+}
